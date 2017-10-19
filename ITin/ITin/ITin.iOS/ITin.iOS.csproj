@@ -25,8 +25,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386, x86_64</MtouchArch>
-    <MtouchLink>None</MtouchLink>
+    <MtouchLink>SdkOnly</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchSdkVersion>11.0</MtouchSdkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -136,7 +137,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ITin\ITin.csproj">
-      <Project>{f67e110b-f281-4b0f-b714-090277ad24e6}</Project>
+      <Project>{E4AB6194-60B8-44E0-B500-336860870D8C}</Project>
       <Name>ITin</Name>
     </ProjectReference>
   </ItemGroup>

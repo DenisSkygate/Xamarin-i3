@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GeeCoeur.SignupPage">
+	<ContentPage.Content>
+
+        <StackLayout Margin="40">
+            <Label Text="Account creation" 
+                FontSize="30" 
+            TextColor="Purple"
+            HorizontalOptions="Center"
+            />
+        <Entry Placeholder="Email"/>
+        <Entry Placeholder="Username"/>
+        <Entry Placeholder="Firstname"/>
+        <Entry Placeholder="Lastname"/>
+        <Entry IsPassword="true" Placeholder="Password"/>
+        <Entry IsPassword="true" Placeholder="Confirm password"/>
+        <Button Text="Sign up" 
+            Clicked="Signup_Clicked"
+            BackgroundColor="Green" 
+            TextColor="White"/>
+
+        <Label Margin="0,30,0,0" 
+            Text="Already registered?" 
+                
+            HorizontalOptions="Center"/>
+            
+        <Button Text="Login" 
+            Clicked="Login_Clicked"
+            BackgroundColor="Purple" 
+            TextColor="White"
+            />
+
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

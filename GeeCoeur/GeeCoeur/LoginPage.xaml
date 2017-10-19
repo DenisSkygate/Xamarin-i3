@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="GeeCoeur.LoginPage">
+
+
+    <ContentPage.Content>
+
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Label Text="GeeCoeur"
+                FontSize="50" 
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                TextColor="Purple" 
+                Grid.Row="0"/>
+
+
+            
+            <StackLayout Grid.Row="1" 
+                Margin="20,0,20,0">
+
+                <Entry Placeholder="username"/> 
+                
+                <Entry Placeholder="password" 
+                    IsPassword="true"/> 
+                
+                <Button Text="Login" 
+                    TextColor="White"
+                    Clicked="Login_Clicked"
+
+                    
+                    BackgroundColor="Purple"/>
+                
+                <Label Margin="0,30,0,0" 
+                    Text="Not registered yet?" 
+                    HorizontalOptions="Center"/>
+                
+                <Button Text="Create a new account" 
+                    Clicked="Signup_Clicked"
+                    BackgroundColor="Green" 
+                    TextColor="White"/>
+                
+            </StackLayout>
+        </Grid>
+
+
+        
+	</ContentPage.Content>
+
+    
+</ContentPage>
