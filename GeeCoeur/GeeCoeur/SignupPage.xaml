@@ -11,9 +11,6 @@
             HorizontalOptions="Center"
             />
         <Entry Placeholder="Email"/>
-        <Entry Placeholder="Username"/>
-        <Entry Placeholder="Firstname"/>
-        <Entry Placeholder="Lastname"/>
         <Entry IsPassword="true" Placeholder="Password"/>
         <Entry IsPassword="true" Placeholder="Confirm password"/>
         <Button Text="Sign up" 

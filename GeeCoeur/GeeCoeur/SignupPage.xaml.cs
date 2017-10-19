@@ -14,14 +14,15 @@ namespace GeeCoeur
 
 
         }
-        async void Login_Clicked(object sender, System.EventArgs e)
+        void Login_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            var parent = this.Parent as TabbedPage;
+            parent.CurrentPage = parent.Children[0];
         }
 
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new GeeCoeur());
+            await Navigation.PopModalAsync();
 
         }
     }

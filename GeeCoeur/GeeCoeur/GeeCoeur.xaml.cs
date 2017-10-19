@@ -16,7 +16,7 @@ namespace GeeCoeur
 
         private void LaunchLogin()
         {
-            Navigation.PushModalAsync(new LoginPage());
+            Navigation.PushModalAsync(new AccountCreationPage());
         }
 
         static bool Logged = false;
