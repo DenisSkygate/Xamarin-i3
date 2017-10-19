@@ -10,7 +10,7 @@ namespace GeeCoeur
 
 
 
-            MainPage = new NavigationPage (new GeeCoeur());
+            MainPage = new NavigationPage (new GeeCoeurPage());
 
 
 
