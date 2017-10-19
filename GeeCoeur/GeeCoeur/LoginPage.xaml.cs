@@ -21,7 +21,7 @@ namespace GeeCoeur
 
         }
 
-        async void Signup_Clicked(object sender, System.EventArgs e)
+        void Signup_Clicked(object sender, System.EventArgs e)
         {
             
             var parent = this.Parent as TabbedPage;

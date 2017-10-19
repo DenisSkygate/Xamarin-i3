@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace GeeCoeur
 {
-    public partial class GeeCoeur : ContentPage
+    public partial class GeeCoeurPage : ContentPage
     {
-        public GeeCoeur()
+        public GeeCoeurPage()
         {
             InitializeComponent();
             if (!Logged)
