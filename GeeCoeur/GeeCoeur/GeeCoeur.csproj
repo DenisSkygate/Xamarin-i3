@@ -44,6 +44,21 @@
     <EmbeddedResource Include="Views\AccountCompletionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountBasicInfoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountStatusPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountSkillsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountInterestsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Account\AccountWorkPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -67,6 +82,21 @@
       <DependentUpon>AccountCompletionPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Work.cs" />
+    <Compile Include="Views\Account\AccountBasicInfoPage.xaml.cs">
+      <DependentUpon>AccountBasicInfoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\AccountStatusPage.xaml.cs">
+      <DependentUpon>AccountStatusPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\AccountSkillsPage.xaml.cs">
+      <DependentUpon>AccountSkillsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\AccountInterestsPage.xaml.cs">
+      <DependentUpon>AccountInterestsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Account\AccountWorkPage.xaml.cs">
+      <DependentUpon>AccountWorkPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -86,6 +116,7 @@
   <ItemGroup>
     <Folder Include="Model\" />
     <Folder Include="Views\" />
+    <Folder Include="Views\Account\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />

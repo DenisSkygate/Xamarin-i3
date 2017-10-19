@@ -22,6 +22,7 @@ namespace GeeCoeur
 
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
+            GeeCoeurPage.Logged = true;
             await Navigation.PopModalAsync();
 
         }
