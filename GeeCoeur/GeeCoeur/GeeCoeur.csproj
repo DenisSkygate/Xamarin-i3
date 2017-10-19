@@ -29,16 +29,19 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.xaml" />
-    <EmbeddedResource Include="LoginPage.xaml">
+    <EmbeddedResource Include="Views\AccountCreationPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignupPage.xaml">
+    <EmbeddedResource Include="Views\GeeCoeurPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="GeeCoeurPage.xaml">
+    <EmbeddedResource Include="Views\LoginPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="AccountCreationPage.xaml">
+    <EmbeddedResource Include="Views\SignupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\AccountCompletionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
@@ -47,19 +50,23 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="LoginPage.xaml.cs">
-      <DependentUpon>LoginPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="SignupPage.xaml.cs">
-      <DependentUpon>SignupPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="GeeCoeurPage.xaml.cs">
-      <DependentUpon>GeeCoeurPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="AccountCreationPage.xaml.cs">
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Views\AccountCreationPage.xaml.cs">
       <DependentUpon>AccountCreationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\Account.cs" />
+    <Compile Include="Views\GeeCoeurPage.xaml.cs">
+      <DependentUpon>GeeCoeurPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SignupPage.xaml.cs">
+      <DependentUpon>SignupPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AccountCompletionPage.xaml.cs">
+      <DependentUpon>AccountCompletionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Work.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -73,10 +80,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="Views\packages.config" />
+    <None Include="Model\Account Draft.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.4.0.280\build\portable-win+net45+wp80+win81+wpa81\Xamarin.Forms.targets')" />
