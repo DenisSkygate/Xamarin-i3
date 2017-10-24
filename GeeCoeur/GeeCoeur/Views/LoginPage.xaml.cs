@@ -11,21 +11,26 @@ namespace GeeCoeur
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
-           
         }
 
         async void Login_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PopModalAsync();
-
+            if (email.Text == GeeCoeurPage.Email && password.Text == GeeCoeurPage.Password)
+            {
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                email.BackgroundColor = Color.Red;
+                password.BackgroundColor = Color.Red;
+            }
         }
 
         void Signup_Clicked(object sender, System.EventArgs e)
         {
-            
             var parent = this.Parent as TabbedPage;
             parent.CurrentPage = parent.Children[1];
+
         }
 
     }

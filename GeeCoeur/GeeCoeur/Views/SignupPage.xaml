@@ -10,9 +10,9 @@
             TextColor="Purple"
             HorizontalOptions="Center"
             />
-        <Entry Placeholder="Email"/>
-        <Entry IsPassword="true" Placeholder="Password"/>
-        <Entry IsPassword="true" Placeholder="Confirm password"/>
+            <Entry Placeholder="Email" x:Name="email"/>
+            <Entry IsPassword="true" Placeholder="Password" x:Name="password"/>
+            <Entry IsPassword="true" Placeholder="Confirm password" x:Name="passwordconfirm"/>
         <Button Text="Sign up" 
             Clicked="Signup_Clicked"
             BackgroundColor="Green" 

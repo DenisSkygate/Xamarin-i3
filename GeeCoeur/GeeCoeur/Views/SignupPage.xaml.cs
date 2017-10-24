@@ -22,9 +22,19 @@ namespace GeeCoeur
 
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
-            GeeCoeurPage.Logged = true;
-            await Navigation.PopModalAsync();
-
+            if (password.Text == passwordconfirm.Text)
+            {
+                GeeCoeurPage.Email = email.Text;
+                GeeCoeurPage.Password = password.Text;
+                GeeCoeurPage.Logged = true;
+                await Navigation.PopModalAsync();
+            }
+            else
+            {
+                password.BackgroundColor = Color.Red;
+                passwordconfirm.BackgroundColor = Color.Red;
+            }
         }
+
     }
 }

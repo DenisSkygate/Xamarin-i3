@@ -33,5 +33,6 @@ namespace GeeCoeur.Model
 
         //Skills
         public List<string> Skills { get; private set; }
+
     }
 }

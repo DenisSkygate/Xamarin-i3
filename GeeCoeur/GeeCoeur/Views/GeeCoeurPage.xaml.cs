@@ -12,11 +12,9 @@ namespace GeeCoeur
             InitializeComponent();
             if (!Logged)
                 LaunchLogin();
-           
-
         }
 
-       
+
         private void LaunchLogin()
         {
             var account = new AccountCreationPage();
@@ -30,9 +28,22 @@ namespace GeeCoeur
             Navigation.PushModalAsync(account);
         }
 
-      
+
 
         public static bool Logged = false;
         public static bool AccountCompleted = false;
+
+
+
+        public static string Email;
+        public static string Password;
+
+        public static string FirstName;
+        public static string LastName;
+        public static string Username;
+        public static DateTime Birthday;
+
+        static public List<string> Skills;
+
     }
 }

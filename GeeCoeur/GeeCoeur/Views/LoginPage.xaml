@@ -26,10 +26,10 @@
             <StackLayout Grid.Row="1" 
                 Margin="20,0,20,0">
 
-                <Entry Placeholder="email"/> 
+                <Entry Placeholder="email" x:Name="email"/> 
                 
                 <Entry Placeholder="password" 
-                    IsPassword="true"/> 
+                    IsPassword="true" x:Name="password"/> 
                 
                 <Button Text="Login" 
                     TextColor="White"
