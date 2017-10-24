@@ -26,7 +26,7 @@ namespace GeeCoeur.Views.Account
         }
         void AddSkill_Clicked(object sender, System.EventArgs e)
         {
-            GeeCoeurPage.Skills.Add(SkillEntry.Text);
+            GeeCoeurPage.User.Skills.Add(SkillEntry.Text);
             var lab = new Label();
             lab.Text = SkillEntry.Text;
             this.SkillsLayout.Children.Add(lab);

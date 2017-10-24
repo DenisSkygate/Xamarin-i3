@@ -24,8 +24,7 @@ namespace GeeCoeur
         {
             if (password.Text == passwordconfirm.Text)
             {
-                GeeCoeurPage.Email = email.Text;
-                GeeCoeurPage.Password = password.Text;
+                GeeCoeurPage.User.SetSignUpInfo(email.Text, password.Text);
                 GeeCoeurPage.Logged = true;
                 await Navigation.PopModalAsync();
             }

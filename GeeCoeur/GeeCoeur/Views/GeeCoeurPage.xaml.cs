@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeeCoeur.Model;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -9,6 +10,7 @@ namespace GeeCoeur
     {
         public GeeCoeurPage()
         {
+            Skills = new List<string>();
             InitializeComponent();
             if (!Logged)
                 LaunchLogin();
@@ -28,22 +30,10 @@ namespace GeeCoeur
             Navigation.PushModalAsync(account);
         }
 
-
+        public static Account User;
 
         public static bool Logged = false;
         public static bool AccountCompleted = false;
-
-
-
-        public static string Email;
-        public static string Password;
-
-        public static string FirstName;
-        public static string LastName;
-        public static string Username;
-        public static DateTime Birthday;
-
-        static public List<string> Skills;
 
     }
 }

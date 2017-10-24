@@ -7,6 +7,15 @@ namespace GeeCoeur.Model
     {
         public Account()
         {
+            Skills = new List<string>();
+
+            Games = new List<string>();
+            Movies = new List<string>();
+            TvShows = new List<string>();
+            Books = new List<string>();
+            Music = new List<string>();
+
+            Work = new Work();
         }
 
         //Basic info
@@ -34,5 +43,18 @@ namespace GeeCoeur.Model
         //Skills
         public List<string> Skills { get; private set; }
 
+        public void SetSignUpInfo(string email, string password)
+        {
+            Email = email;
+            Password = password;
+        }
+
+        public void SetBasicInfo(DateTime birthday, string firstName = null, string lastName = null, string username = null)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Pseudo = username;
+            Birthday = birthday;
+        }
     }
 }

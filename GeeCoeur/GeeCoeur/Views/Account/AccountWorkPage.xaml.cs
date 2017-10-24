@@ -17,6 +17,7 @@ namespace GeeCoeur.Views.Account
         }
         void Back_Clicked(object sender, System.EventArgs e)
         {
+            GeeCoeurPage.User.Work.SetWorkInfo(Title.Text, Description.Text);
             var papa = (this.Parent as TabbedPage);
             papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) -1];
         }
