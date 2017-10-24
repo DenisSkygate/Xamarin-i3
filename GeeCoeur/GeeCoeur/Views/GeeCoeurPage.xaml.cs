@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using GeeCoeur.Views.Account;
 using Xamarin.Forms;
 
 namespace GeeCoeur
@@ -16,6 +16,10 @@ namespace GeeCoeur
 
         }
 
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+            Navigation.PushAsync(new AccountPage());
+        }
        
         private void LaunchLogin()
         {
@@ -30,7 +34,7 @@ namespace GeeCoeur
             Navigation.PushModalAsync(account);
         }
 
-      
+
 
         public static bool Logged = false;
         public static bool AccountCompleted = false;
