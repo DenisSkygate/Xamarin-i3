@@ -15,15 +15,7 @@ namespace GeeCoeur
 
         async void Login_Clicked(object sender, System.EventArgs e)
         {
-            if (email.Text == GeeCoeurPage.Email && password.Text == GeeCoeurPage.Password)
-            {
-                await Navigation.PopModalAsync();
-            }
-            else
-            {
-                email.BackgroundColor = Color.Red;
-                password.BackgroundColor = Color.Red;
-            }
+            await Navigation.PopModalAsync();
         }
 
         void Signup_Clicked(object sender, System.EventArgs e)

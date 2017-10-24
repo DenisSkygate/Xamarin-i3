@@ -10,7 +10,7 @@ namespace GeeCoeur
     {
         public GeeCoeurPage()
         {
-            Skills = new List<string>();
+            User = new Account();
             InitializeComponent();
             if (!Logged)
                 LaunchLogin();

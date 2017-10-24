@@ -7,6 +7,8 @@ namespace GeeCoeur.Model
     {
         public Account()
         {
+            Status = new bool[3];
+
             Skills = new List<string>();
 
             Games = new List<string>();
@@ -28,7 +30,8 @@ namespace GeeCoeur.Model
         public int SexualOrientation { get; private set; }
 
         //Status
-        public int Status { get; private set; }
+        //public int Status { get; private set; }
+        public bool[] Status { get; private set; }
 
         //Interests
         public List<string> Games { get; private set; }
@@ -49,12 +52,19 @@ namespace GeeCoeur.Model
             Password = password;
         }
 
-        public void SetBasicInfo(DateTime birthday, string firstName = null, string lastName = null, string username = null)
+        public void SetBasicInfo(DateTime birthday ,string firstName = null, string lastName = null, string username = null)
         {
             FirstName = firstName;
             LastName = lastName;
             Pseudo = username;
             Birthday = birthday;
+        }
+
+        public void SetStatus(bool friend, bool friendPlus, bool player2)
+        {
+            Status[0] = friend;
+            Status[1] = friendPlus;
+            Status[2] = player2;
         }
     }
 }

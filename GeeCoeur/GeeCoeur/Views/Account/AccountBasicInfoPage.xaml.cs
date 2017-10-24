@@ -13,9 +13,13 @@ namespace GeeCoeur.Views.Account
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {
-            GeeCoeurPage.User.SetBasicInfo(Birthday.Date ,FirstName.Text, Lastname.Text, Username.Text);
-            var papa = (this.Parent as TabbedPage);
-            papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) + 1];
+            if (Birthday.Date.Year <= DateTime.Today.Year - 18)
+            {
+                GeeCoeurPage.User.SetBasicInfo(firstName: FirstName.Text, lastName: Lastname.Text, username: Username.Text, birthday: Birthday.Date);
+                var papa = (this.Parent as TabbedPage);
+                papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) + 1];
+            }
+            
         }
 
     }

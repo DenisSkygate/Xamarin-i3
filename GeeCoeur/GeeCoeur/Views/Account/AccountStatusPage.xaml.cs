@@ -13,6 +13,8 @@ namespace GeeCoeur.Views.Account
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {
+            GeeCoeurPage.User.SetStatus(Friend.IsToggled, FriendPlus.IsToggled, PlayerTwo.IsToggled);
+
             var papa = (this.Parent as TabbedPage);
             papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) + 1];
         }

@@ -7,13 +7,28 @@
                 <RowDefinition/>
                 <RowDefinition Height="0.2*"/>
             </Grid.RowDefinitions>
-            <StackLayout Grid.Row="0" Margin="30">
-                <Entry x:Name="FirstName" Placeholder="First name"/>
-                <Entry x:Name="Lastname"  Placeholder="Last name"/>
-                <Entry x:Name="Username"  Placeholder="Username"/>
-                <DatePicker x:Name="Birthday" />
+            <Grid Grid.Row="0" Margin="30">
+                
+                <StackLayout Grid.Row="0" Margin="30">
+                    <Entry x:Name="GameEntry" Placeholder="Skills"/>
 
-            </StackLayout>
+                    <Button x:Name="AddGameButton" Clicked="AddGame_Clicked" Text="Add skill"/>
+                    <StackLayout Orientation="Horizontal" x:Name="GamesLayout" >
+
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout Grid.Row="1" Margin="30">
+                    <Entry x:Name="MoviesEntry" Placeholder="Skills"/>
+
+                    <Button x:Name="AddMovieButton" Clicked="AddMovies_Clicked" Text="Add skill"/>
+                    <StackLayout Orientation="Horizontal" x:Name="MoviesLayout" >
+
+                    </StackLayout>
+
+                </StackLayout>
+
+            </Grid>
             <Button Grid.Row="1" HorizontalOptions="End" Text="Next"   x:Name="NextButton" Clicked="Next_Clicked"/>
             <Button Grid.Row="1" HorizontalOptions="Start" Text="Back" x:Name="BackButton" Clicked="Back_Clicked"/>
         </Grid>
