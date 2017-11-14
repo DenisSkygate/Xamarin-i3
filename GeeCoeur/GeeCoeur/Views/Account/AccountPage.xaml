@@ -1,76 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GeeCoeur.Views.Account.AccountPage">
-	<ContentPage.Content>
-       <ScrollView>
+    <ContentPage.Content>
+        <ScrollView>
             <StackLayout>
 
                 <StackLayout x:Name="ProfilePic">
-                <Button x:Name="PicButton" Text="Pick Picture" Clicked="Handle_Clicked"></Button>
+                    <Button x:Name="PicButton" Text="Pick Picture" Clicked="Handle_Clicked"></Button>
                 </StackLayout>
 
-                
+
                 <StackLayout>
                     <Grid>
-                   <Label HorizontalOptions="Center" FontSize="20"> Basic Info</Label>
-                    <Button Text="Update" HorizontalOptions="End"/>
-                    </Grid> 
-                    
-                    <Label Text="Firstname Lastname"/>
-                    <Label Text="Pseudo"/>
-                    <Label Text="Email"/>
-                    <Label Text="Birthdate"/>
-                    <Label Text="Sexual Orientation"/>
+                        <Label HorizontalOptions="Center" FontSize="20">Basic Info</Label>
+                        <Button Text="Update" HorizontalOptions="End" Clicked="ButtonUpdate_Clicked"/>
+                    </Grid>
+
+                    <Label x:Name="Label_Name" Text="Firstname Lastname"/>
+                    <Label x:Name="Label_Pseudo" Text="Pseudo"/>
+                    <Label x:Name="Label_Email" Text="Email"/>
+                    <Label x:Name="Label_BirthDay" Text="Birthdate"/>
+                    <Label x:Name="Label_Orientation" Text="Sexual Orientation"/>
                 </StackLayout>
                 <StackLayout>
-                  <Label HorizontalOptions="Center" FontSize="20"> Status</Label>
-                  <StackLayout Orientation="Horizontal"> <Switch/><Label>Looking for a friend</Label></StackLayout> 
-                  <StackLayout Orientation="Horizontal">  <Switch/><Label>Looking for a friend++</Label> </StackLayout> 
-                  <StackLayout Orientation="Horizontal">  <Switch/><Label>Looking for Player 2</Label></StackLayout> 
+                    <Label HorizontalOptions="Center" FontSize="20">Status</Label>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch x:Name="Switch_Friend"/>
+                        <Label>Looking for a friend</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch x:Name="Switch_FriendPlus"/>
+                        <Label>Looking for a friend++</Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Switch x:Name="Switch_Player2"/>
+                        <Label>Looking for Player 2</Label>
+                    </StackLayout>
                 </StackLayout>
-                 <StackLayout>
-                    <Label HorizontalOptions="Center" FontSize="20"> Interests</Label>
-                    <StackLayout x:Name="GameList" Orientation="Horizontal"> 
-                         <Label Text="Games : " FontAttributes="Bold"/>
-                        <Label Text="Game1"/>
-                        <Label Text="Game2"/>
-                        <Label Text="Game3"/>
-                    </StackLayout> 
-                    <StackLayout Orientation="Horizontal"> 
-                         <Label Text="Movies : " FontAttributes="Bold"/>
-                        
-                        <Label Text="Movie1"/>
-                        <Label Text="Movie2"/>
-                    </StackLayout> 
-                    <StackLayout Orientation="Horizontal"> 
-                         <Label Text="TV Shows : " FontAttributes="Bold"/>
-                        
-                        <Label Text="TVShow1"/>
-                    </StackLayout> 
-                    <StackLayout Orientation="Horizontal"> 
-                         <Label Text="Books : " FontAttributes="Bold"/>
-                        
-                        <Label Text="Book1"/>
-                        <Label Text="Book2"/>
-                        <Label Text="Book3"/>
-                        <Label Text="Book4"/>
-                    </StackLayout> 
-                    <StackLayout Orientation="Horizontal"> 
-                         <Label Text="Music : " FontAttributes="Bold"/>
-                        
-                        <Label Text="Music1"/>
-                        <Label Text="Music2"/>
-                    </StackLayout> 
+                <StackLayout>
+                    <Label HorizontalOptions="Center" FontSize="20">Interests</Label>
+                    <StackLayout x:Name="GameList" Orientation="Horizontal">
+                        <Label Text="Games : " FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout x:Name="MovieList" Orientation="Horizontal">
+                        <Label  Text="Movies : " FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout x:Name="TvShowsList" Orientation="Horizontal">
+                        <Label Text="TV Shows : " FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout x:Name="BookList" Orientation="Horizontal">
+                        <Label Text="Books : " FontAttributes="Bold"/>
+                    </StackLayout>
+                    <StackLayout x:Name="MusicList" Orientation="Horizontal">
+                        <Label Text="Music : " FontAttributes="Bold"/>
+                    </StackLayout>
                 </StackLayout>
                 <StackLayout>
                     <Grid>
-                        <Label HorizontalOptions="Center" FontSize="20"> Skills</Label>
+                        <Label HorizontalOptions="Center" FontSize="20">Skills</Label>
                         <Button Text="Add" HorizontalOptions="End"/>
                     </Grid>
-                     <StackLayout Orientation="Horizontal" x:Name="SkillsLayout" >
-                        
+                    <StackLayout Orientation="Horizontal" x:Name="SkillsLayout" >
+                        <Label Text="Skills : " FontAttributes="Bold"/>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
-	</ContentPage.Content>
+    </ContentPage.Content>
 </ContentPage>

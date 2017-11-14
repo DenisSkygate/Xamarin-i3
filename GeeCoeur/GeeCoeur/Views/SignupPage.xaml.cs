@@ -23,6 +23,11 @@ namespace GeeCoeur
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
             GeeCoeurPage.Logged = true;
+
+            GeeCoeurPage.email = Entry_Email.Text;
+            GeeCoeurPage.password = Entry_Password.Text;
+
+
             await Navigation.PushAsync(new AccountCompletionPage());
 
         

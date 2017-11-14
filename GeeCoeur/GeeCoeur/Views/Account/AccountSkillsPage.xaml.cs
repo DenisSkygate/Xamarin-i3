@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GeeCoeur.Views.Account.Items;
+using System;
 using System.Collections.Generic;
 
 using Xamarin.Forms;
@@ -26,8 +27,8 @@ namespace GeeCoeur.Views.Account
         }
         void AddSkill_Clicked(object sender, System.EventArgs e)
         {
-            var lab = new Label();
-            lab.Text = SkillEntry.Text;
+            var lab = new SkillView(SkillEntry.Text);
+
             this.SkillsLayout.Children.Add(lab);
             SkillEntry.Text = "";
         }

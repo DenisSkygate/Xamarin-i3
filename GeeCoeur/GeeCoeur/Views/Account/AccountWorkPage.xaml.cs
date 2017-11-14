@@ -13,7 +13,9 @@ namespace GeeCoeur.Views.Account
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PopAsync();
+            GeeCoeurPage.Logged = true;
+            //Navigation.PopAsync();
+            Navigation.PushAsync(new AccountPage());
         }
         void Back_Clicked(object sender, System.EventArgs e)
         {
