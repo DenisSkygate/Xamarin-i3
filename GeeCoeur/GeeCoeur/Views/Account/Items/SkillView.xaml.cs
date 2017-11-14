@@ -19,7 +19,9 @@ namespace GeeCoeur.Views.Account.Items
             InitializeComponent();
             theSkill = new Skill(theSkillText);
             skillName.Text = theSkill.name;
-
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += Button_Clicked;
+            DeleteLabel.GestureRecognizers.Add(tapGestureRecognizer);
             GeeCoeurPage.Skills.Add(theSkill);
 
         }

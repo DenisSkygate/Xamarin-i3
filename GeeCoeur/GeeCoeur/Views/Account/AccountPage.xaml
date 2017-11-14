@@ -18,23 +18,23 @@
                     <Label HorizontalOptions="Center" x:Name="Label_BirthDay" Text="Birthdate"/>
                     <Label HorizontalOptions="Center" x:Name="Label_Orientation" Text="Sexual Orientation"/>
                 </StackLayout>
-                <StackLayout Margin="0,0,0,30">
-                    <Label HorizontalOptions="Center" FontSize="20">Status</Label>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <StackLayout Margin="0,0,0,30"  HorizontalOptions="Center">
+                    <Label HorizontalOptions="Center" FontSize="20" Margin="0,0,0,20">Status</Label>
+                    <StackLayout Orientation="Horizontal">
                         <Switch x:Name="Switch_Friend"/>
                         <Label>Looking for a friend</Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
                         <Switch x:Name="Switch_FriendPlus"/>
                         <Label>Looking for a friend++</Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <StackLayout Orientation="Horizontal">
                         <Switch x:Name="Switch_Player2"/>
                         <Label>Looking for Player 2</Label>
                     </StackLayout>
                 </StackLayout>
                 <StackLayout>
-                    <Label HorizontalOptions="Center" FontSize="20">Interests</Label>
+                    <Label HorizontalOptions="Center" FontSize="20" Margin="0,0,0,20">Interests</Label>
                     <StackLayout x:Name="GameList" Orientation="Horizontal">
                         <Label Text="Games : " FontAttributes="Bold"/>
                     </StackLayout>
@@ -53,7 +53,7 @@
                 </StackLayout>
                 <StackLayout>
                     <Grid>
-                        <Label HorizontalOptions="Center" FontSize="20">Skills</Label>
+                        <Label HorizontalOptions="Center" FontSize="20" Margin="0,0,0,20">Skills</Label>
                         <Button Text="Add" HorizontalOptions="End"/>
                     </Grid>
                     <StackLayout Orientation="Horizontal" x:Name="SkillsLayout" >
