@@ -21,16 +21,18 @@ namespace GeeCoeur.Views.Account.Items
             skillName.Text = theSkill.name;
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += Button_Clicked;
-            DeleteLabel.GestureRecognizers.Add(tapGestureRecognizer);
+            this.GestureRecognizers.Add(tapGestureRecognizer);
             GeeCoeurPage.Skills.Add(theSkill);
 
         }
-
+        public bool DeleteOnTap = true;
         private void Button_Clicked(object sender, EventArgs e)
         {
-            GeeCoeurPage.Skills.Remove(theSkill);
-            this.IsEnabled = false;
-            this.IsVisible = false;
+            if(DeleteOnTap){
+                GeeCoeurPage.Skills.Remove(theSkill);
+                this.IsEnabled = false;
+                this.IsVisible = false;
+            }
         }
     }
 }
