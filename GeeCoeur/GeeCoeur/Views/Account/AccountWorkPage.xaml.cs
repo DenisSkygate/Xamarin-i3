@@ -15,7 +15,10 @@ namespace GeeCoeur.Views.Account
         {
             App.Current.MainPage = new NavigationPage(new GeeCoeurPage());
 
-           // await (this.Parent as TabbedPage).Navigation.PopAsync();
+            // await (this.Parent as TabbedPage).Navigation.PopAsync();
+
+            GeeCoeurPage.SignedAccount.Work.Title = Title.Text;
+            GeeCoeurPage.SignedAccount.Work.Description = Description.Text;
         }
         void Back_Clicked(object sender, System.EventArgs e)
         {

@@ -17,6 +17,8 @@ namespace GeeCoeur.Views.Account
             GeeCoeurPage.SignedAccount.LastName = Entry_Lastname.Text;
             GeeCoeurPage.SignedAccount.Pseudo = Entry_Username.Text;
 
+            GeeCoeurPage.SignedAccount.Birthday = Entry_Birthday.Date;
+
             var papa = (this.Parent as TabbedPage);
             papa.CurrentPage = papa.Children[papa.Children.IndexOf(this)+1];
         }

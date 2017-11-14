@@ -22,7 +22,17 @@
                 <Button x:Name="AddBookButton" Text="Add"  Clicked="AddBooks_Clicked" />
                 <StackLayout Orientation="Horizontal" x:Name="BooksLayout">
                 </StackLayout>
-                
+
+                <Entry x:Name="MusicsEntry" Placeholder="Books"/>
+                <Button x:Name="AddMusicButton" Text="Add"  Clicked="AddMusics_Clicked" />
+                <StackLayout Orientation="Horizontal" x:Name="MusicsLayout">
+                </StackLayout>
+
+                <Entry x:Name="TvShowsEntry" Placeholder="Books"/>
+                <Button x:Name="AddTvShowButton" Text="Add"  Clicked="AddTvShows_Clicked" />
+                <StackLayout Orientation="Horizontal" x:Name="TvShowsLayout">
+                </StackLayout>
+
             </StackLayout>
             <Button Grid.Row="1" HorizontalOptions="End" Text="Next"   x:Name="NextButton" Clicked="Next_Clicked"/>
             <Button Grid.Row="1" HorizontalOptions="Start" Text="Back" x:Name="BackButton" Clicked="Back_Clicked"/>

@@ -14,6 +14,8 @@ namespace GeeCoeur.Model
             Books = new List<string>();
             Music = new List<string>();
             Skills = new List<Skill>();
+
+            Work = new Work();
         }
 
         //Basic info
