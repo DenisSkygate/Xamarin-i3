@@ -24,16 +24,11 @@ namespace GeeCoeur
         private void LaunchLogin()
         {
             var account = new AccountCreationPage();
-            account.Disappearing += LoginDisapeared;
+     
             Navigation.PushAsync(account);
         }
 
-        private void LoginDisapeared(object sender, EventArgs e)
-        {
-            var account = new AccountCompletionPage();
-            Navigation.PushAsync(account);
-        }
-
+      
 
 
         public static bool Logged = false;

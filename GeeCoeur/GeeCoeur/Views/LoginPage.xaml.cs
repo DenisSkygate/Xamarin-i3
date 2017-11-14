@@ -19,6 +19,7 @@ namespace GeeCoeur
         {
             await Navigation.PopAsync();
 
+
         }
 
         void Signup_Clicked(object sender, System.EventArgs e)
@@ -26,6 +27,7 @@ namespace GeeCoeur
             
             var parent = this.Parent as TabbedPage;
             parent.CurrentPage = parent.Children[1];
+
         }
 
     }

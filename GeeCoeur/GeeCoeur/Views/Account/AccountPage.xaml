@@ -29,7 +29,7 @@
                 </StackLayout>
                  <StackLayout>
                     <Label HorizontalOptions="Center" FontSize="20"> Interests</Label>
-                    <StackLayout Orientation="Horizontal"> 
+                    <StackLayout x:Name="GameList" Orientation="Horizontal"> 
                          <Label Text="Games : " FontAttributes="Bold"/>
                         <Label Text="Game1"/>
                         <Label Text="Game2"/>
