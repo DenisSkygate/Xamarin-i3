@@ -11,9 +11,11 @@ namespace GeeCoeur.Views.Account
         {
             InitializeComponent();
         }
-        void Next_Clicked(object sender, System.EventArgs e)
+        async void Next_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PopAsync();
+            App.Current.MainPage = new NavigationPage(new GeeCoeurPage());
+
+           // await (this.Parent as TabbedPage).Navigation.PopAsync();
         }
         void Back_Clicked(object sender, System.EventArgs e)
         {

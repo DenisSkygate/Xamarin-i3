@@ -11,8 +11,6 @@ namespace GeeCoeur
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-
-
         }
         void Login_Clicked(object sender, System.EventArgs e)
         {
@@ -24,9 +22,6 @@ namespace GeeCoeur
         {
             GeeCoeurPage.Logged = true;
             await Navigation.PushAsync(new AccountCompletionPage());
-
-        
-
         }
 
        

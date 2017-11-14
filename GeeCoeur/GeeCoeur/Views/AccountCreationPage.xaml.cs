@@ -9,10 +9,10 @@ namespace GeeCoeur
     {
         public AccountCreationPage()
         {
-            InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
-            Children.Add(new LoginPage() { Title = "Log in"});
-            Children.Add(new SignupPage() { Title = "Sign up"});
+                InitializeComponent();
+                NavigationPage.SetHasNavigationBar(this, false);
+                Children.Add(new LoginPage() { Title = "Log in"});
+                Children.Add(new SignupPage() { Title = "Sign up"});
         }
     }
 }
