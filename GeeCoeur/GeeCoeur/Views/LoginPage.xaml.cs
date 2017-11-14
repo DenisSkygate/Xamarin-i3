@@ -17,7 +17,7 @@ namespace GeeCoeur
 
         async void Login_Clicked(object sender, System.EventArgs e)
         {
-            await Navigation.PopModalAsync();
+            await Navigation.PopAsync();
 
         }
 

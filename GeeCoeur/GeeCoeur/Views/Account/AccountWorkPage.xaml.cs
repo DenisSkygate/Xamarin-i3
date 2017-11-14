@@ -13,7 +13,7 @@ namespace GeeCoeur.Views.Account
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {
-            Navigation.PopModalAsync();
+            Navigation.PopAsync();
         }
         void Back_Clicked(object sender, System.EventArgs e)
         {

@@ -25,13 +25,13 @@ namespace GeeCoeur
         {
             var account = new AccountCreationPage();
             account.Disappearing += LoginDisapeared;
-            Navigation.PushModalAsync(account);
+            Navigation.PushAsync(account);
         }
 
         private void LoginDisapeared(object sender, EventArgs e)
         {
             var account = new AccountCompletionPage();
-            Navigation.PushModalAsync(account);
+            Navigation.PushAsync(account);
         }
 
 
