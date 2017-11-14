@@ -1,5 +1,4 @@
-﻿using GeeCoeur.Model;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,23 +10,24 @@ using Xamarin.Forms.Xaml;
 namespace GeeCoeur.Views.Account.Items
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SkillView : ContentView
+    public partial class InterestView : ContentView
     {
-        Skill theSkill;
+        string Name;
+        List<string> theList;
 
-        public SkillView(string theSkillText)
+        public InterestView(string theInterestName, List<string> list)
         {
             InitializeComponent();
-            theSkill = new Skill(theSkillText);
-            skillName.Text = theSkill.name;
+            Name = theInterestName;
+            InterestName.Text = theInterestName;
 
-            GeeCoeurPage.SignedAccount.Skills.Add(theSkill);
-
+            theList = list;
+            list.Add(Name);
         }
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            GeeCoeurPage.SignedAccount.Skills.Remove(theSkill);
+            theList.Remove(Name);
             this.IsEnabled = false;
             this.IsVisible = false;
         }

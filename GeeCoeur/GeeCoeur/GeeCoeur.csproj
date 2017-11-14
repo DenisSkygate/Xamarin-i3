@@ -75,6 +75,9 @@
     <Compile Include="Views\AccountCreationPage.xaml.cs">
       <DependentUpon>AccountCreationPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Account\Items\InterestView.xaml.cs">
+      <DependentUpon>InterestView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Account\Items\SkillView.xaml.cs">
       <DependentUpon>SkillView.xaml</DependentUpon>
     </Compile>
@@ -127,7 +130,12 @@
     <None Include="Views\packages.config" />
     <None Include="Model\Account Draft.txt" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\Account\Items\InterestView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Account\Items\SkillView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

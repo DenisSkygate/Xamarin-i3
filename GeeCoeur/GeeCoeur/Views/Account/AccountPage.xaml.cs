@@ -41,69 +41,69 @@ namespace GeeCoeur.Views.Account
 
         public void updateVisibleInfo()
         {
-            if (GeeCoeurPage.email != null && GeeCoeurPage.email != "")
+            if (GeeCoeurPage.SignedAccount.Email != null && GeeCoeurPage.SignedAccount.Email != "")
             {
-                Label_Email.Text = GeeCoeurPage.email;
+                Label_Email.Text = GeeCoeurPage.SignedAccount.Email;
             }
-            if (GeeCoeurPage.pseudo != null && GeeCoeurPage.pseudo != "")
+            if (GeeCoeurPage.SignedAccount.Pseudo != null && GeeCoeurPage.SignedAccount.Pseudo != "")
             {
-                Label_Pseudo.Text = GeeCoeurPage.pseudo;
+                Label_Pseudo.Text = GeeCoeurPage.SignedAccount.Pseudo;
             }
-            if (GeeCoeurPage.firstName != null || GeeCoeurPage.lastName != null)
+            if (GeeCoeurPage.SignedAccount.FirstName != null || GeeCoeurPage.SignedAccount.LastName != null)
             {
-                Label_Name.Text = GeeCoeurPage.firstName + GeeCoeurPage.lastName;
+                Label_Name.Text = GeeCoeurPage.SignedAccount.FirstName + " " + GeeCoeurPage.SignedAccount.LastName;
             }
-            if (GeeCoeurPage.birthday != null)
+            if (GeeCoeurPage.SignedAccount.Birthday != null)
             {
-                Label_BirthDay.Text = GeeCoeurPage.birthday.Date.ToString();
+                Label_BirthDay.Text = GeeCoeurPage.SignedAccount.Birthday.Date.ToString();
             }
 
-            Switch_Friend.IsToggled = GeeCoeurPage.status_Friend;
-            Switch_FriendPlus.IsToggled = GeeCoeurPage.status_FriendPlus;
-            Switch_Player2.IsToggled = GeeCoeurPage.status_Player2;
+            Switch_Friend.IsToggled = GeeCoeurPage.SignedAccount.Status[0];
+            Switch_FriendPlus.IsToggled = GeeCoeurPage.SignedAccount.Status[1];
+            Switch_Player2.IsToggled = GeeCoeurPage.SignedAccount.Status[2];
 
             // Update Skills
-            foreach (Skill newItem in GeeCoeurPage.Skills)
+            foreach (Skill newItem in GeeCoeurPage.SignedAccount.Skills)
             {
                 var label = new Label();
                 label.Text = newItem.name;
                 SkillsLayout.Children.Add(label);
             }
             // Update Movies
-            foreach (string newItem in GeeCoeurPage.Movies)
+            foreach (string newItem in GeeCoeurPage.SignedAccount.Movies)
             {
                 var label = new Label();
                 label.Text = newItem;
                 MovieList.Children.Add(label);
             }
             // Update Games
-            foreach (string newItem in GeeCoeurPage.Games)
+            foreach (string newItem in GeeCoeurPage.SignedAccount.Games)
             {
                 var label = new Label();
                 label.Text = newItem;
                 GameList.Children.Add(label);
             }
             // Update Music
-            foreach (string newItem in GeeCoeurPage.Music)
+            foreach (string newItem in GeeCoeurPage.SignedAccount.Music)
             {
                 var label = new Label();
                 label.Text = newItem;
                 MusicList.Children.Add(label);
             }
             // Update Books
-            foreach (string newItem in GeeCoeurPage.Books)
+            foreach (string newItem in GeeCoeurPage.SignedAccount.Books)
             {
                 var label = new Label();
                 label.Text = newItem;
                 BookList.Children.Add(label);
             }
-            foreach (string newItem in GeeCoeurPage.TvShows)
+            foreach (string newItem in GeeCoeurPage.SignedAccount.TvShows)
             {
                 var label = new Label();
                 label.Text = newItem;
                 TvShowsList.Children.Add(label);
             }
-            
+
         }
 
 

@@ -22,8 +22,8 @@ namespace GeeCoeur
         {
             GeeCoeurPage.Logged = true;
 
-            GeeCoeurPage.email = Entry_Email.Text;
-            GeeCoeurPage.password = Entry_Password.Text;
+            GeeCoeurPage.SignedAccount.Email = Entry_Email.Text;
+            GeeCoeurPage.SignedAccount.Password = Entry_Password.Text;
 
 
             await Navigation.PushAsync(new AccountCompletionPage());
