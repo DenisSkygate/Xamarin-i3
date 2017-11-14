@@ -11,11 +11,12 @@ namespace GeeCoeur
         public GeeCoeurPage()
         {
             InitializeComponent();
-            if (!Logged)
+            if (!Logged){
                 LaunchLogin();
-
-
+            }
         }
+      
+       
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
@@ -28,10 +29,6 @@ namespace GeeCoeur
 
             Navigation.PushAsync(account);
         }
-
-
-
-
         public static bool Logged = false;
         public static bool AccountCompleted = false;
 

@@ -20,11 +20,9 @@ namespace GeeCoeur.Views.Account
                     Source = ImageSource.FromStream(() => stream),
                     BackgroundColor = Color.Gray
                 };
-
                 TapGestureRecognizer recognizer = new TapGestureRecognizer();
                 recognizer.Tapped += (sender2, args) =>
                 {
-
                 };
                 image.GestureRecognizers.Add(recognizer);
 
@@ -35,7 +33,6 @@ namespace GeeCoeur.Views.Account
                 PicButton.IsEnabled = true;
             }
         }
-
         public AccountPage()
         {
             InitializeComponent();
