@@ -11,6 +11,14 @@ namespace GeeCoeur.Views.Account
         public AccountInterestsPage()
         {
             InitializeComponent();
+
+            ShowExistingInterests(MovieLayout, GeeCoeurPage.SignedAccount.Movies);
+            ShowExistingInterests(GamesLayout, GeeCoeurPage.SignedAccount.Games);
+            ShowExistingInterests(MusicsLayout, GeeCoeurPage.SignedAccount.Music);
+            ShowExistingInterests(TvShowsLayout, GeeCoeurPage.SignedAccount.TvShows);
+            ShowExistingInterests(BooksLayout, GeeCoeurPage.SignedAccount.Books);
+
+
             GamesEntry.Text = "";
             MoviesEntry.Text = "";
             BooksEntry.Text = "";
@@ -33,52 +41,48 @@ namespace GeeCoeur.Views.Account
 
         void AddGames_Clicked(object sender, System.EventArgs e)
         {
-            if (GamesEntry.Text != "")
-            {
-                var interest = new InterestView(GamesEntry.Text, GeeCoeurPage.SignedAccount.Games);
-                this.GamesLayout.Children.Add(interest);
-                GamesEntry.Text = "";
-            }
+            AddInterest(GamesEntry, GamesLayout, GeeCoeurPage.SignedAccount.Games);
         }
 
         void AddMovies_Clicked(object sender, System.EventArgs e)
         {
-            if (MoviesEntry.Text != "")
-            {
-                var interest = new InterestView(MoviesEntry.Text, GeeCoeurPage.SignedAccount.Movies);
-                this.MovieLayout.Children.Add(interest);
-                MoviesEntry.Text = "";
-            }
+            AddInterest(MoviesEntry, MovieLayout, GeeCoeurPage.SignedAccount.Movies);
         }
 
         void AddBooks_Clicked(object sender, System.EventArgs e)
         {
-            if (BooksEntry.Text != "")
-            {
-                var interest = new InterestView(BooksEntry.Text, GeeCoeurPage.SignedAccount.Books);
-                this.BooksLayout.Children.Add(interest);
-                BooksEntry.Text = "";
-            }
+            AddInterest(BooksEntry, BooksLayout, GeeCoeurPage.SignedAccount.Books);
         }
 
         void AddTvShows_Clicked(object sender, System.EventArgs e)
         {
-            if (TvShowsEntry.Text != "")
-            {
-                var interest = new InterestView(TvShowsEntry.Text, GeeCoeurPage.SignedAccount.TvShows);
-                this.TvShowsLayout.Children.Add(interest);
-                TvShowsEntry.Text = "";
-            }
+            AddInterest(TvShowsEntry, TvShowsLayout, GeeCoeurPage.SignedAccount.TvShows);
         }
 
         void AddMusics_Clicked(object sender, System.EventArgs e)
         {
-            if (MusicsEntry.Text != "")
+            AddInterest(MusicsEntry, MusicsLayout, GeeCoeurPage.SignedAccount.Music);
+        }
+
+        void AddInterest(Entry entry, StackLayout layout, List<string> theList)
+        {
+            if (entry.Text != "")
             {
-                var interest = new InterestView(MusicsEntry.Text, GeeCoeurPage.SignedAccount.Music);
-                this.MusicsLayout.Children.Add(interest);
-                MusicsEntry.Text = "";
+                InterestView interest = new InterestView(entry.Text, theList);
+                interest.AddToList();
+                layout.Children.Add(interest);
+                entry.Text = "";
             }
+        }
+
+        void ShowExistingInterests(StackLayout layout, List<string> theList)
+        {
+            foreach (string item in theList)
+            {
+                InterestView interest = new InterestView(item, theList);
+                layout.Children.Add(interest);
+            }
+            
         }
     }
 }

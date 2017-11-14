@@ -10,6 +10,10 @@ namespace GeeCoeur.Views.Account
         public AccountStatusPage()
         {
             InitializeComponent();
+
+            Switch_Friend.IsToggled = GeeCoeurPage.SignedAccount.Status[0];
+            Switch_FriendPlus.IsToggled = GeeCoeurPage.SignedAccount.Status[1];
+            Switch_Player2.IsToggled = GeeCoeurPage.SignedAccount.Status[2];
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {

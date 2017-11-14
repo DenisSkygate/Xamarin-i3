@@ -1,4 +1,5 @@
-﻿using GeeCoeur.Views.Account.Items;
+﻿using GeeCoeur.Model;
+using GeeCoeur.Views.Account.Items;
 using System;
 using System.Collections.Generic;
 
@@ -13,6 +14,7 @@ namespace GeeCoeur.Views.Account
         public AccountSkillsPage()
         {
             InitializeComponent();
+            SkillEntry.Text = "";
         }
         void Next_Clicked(object sender, System.EventArgs e)
         {
@@ -27,10 +29,13 @@ namespace GeeCoeur.Views.Account
         }
         void AddSkill_Clicked(object sender, System.EventArgs e)
         {
-            var lab = new SkillView(SkillEntry.Text);
+            if (SkillEntry.Text != "")
+            {
+                var lab = new SkillView(SkillEntry.Text);
 
-            this.SkillsLayout.Children.Add(lab);
-            SkillEntry.Text = "";
+                this.SkillsLayout.Children.Add(lab);
+                SkillEntry.Text = "";
+            }
         }
     }
 }

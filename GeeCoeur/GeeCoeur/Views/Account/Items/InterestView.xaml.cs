@@ -22,7 +22,11 @@ namespace GeeCoeur.Views.Account.Items
             InterestName.Text = theInterestName;
 
             theList = list;
-            list.Add(Name);
+        }
+
+        public void AddToList()
+        {
+            theList.Add(Name);
         }
 
         private void Button_Clicked(object sender, EventArgs e)

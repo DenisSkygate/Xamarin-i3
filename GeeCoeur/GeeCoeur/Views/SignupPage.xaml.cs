@@ -20,7 +20,7 @@ namespace GeeCoeur
 
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
-            if (Entry_Email.Text == Entry_PasswordVerif.Text)
+            if (Entry_Password.Text == Entry_PasswordVerif.Text)
             {
                 GeeCoeurPage.Logged = true;
 
@@ -35,6 +35,9 @@ namespace GeeCoeur
             }
         }
 
-
+        private void Entry_PasswordVerif_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Entry_PasswordVerif.BackgroundColor = Color.Transparent;
+        }
     }
 }

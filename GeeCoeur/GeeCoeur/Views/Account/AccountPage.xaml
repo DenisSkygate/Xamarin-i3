@@ -3,9 +3,6 @@
     <ContentPage.Content>
         <ScrollView Margin="20">
             <StackLayout>
-
-             
-
                 <StackLayout HorizontalOptions="Center" Margin="0,0,0,30">
                     <Grid>
                         <Label HorizontalOptions="Center" FontSize="20">Basic Info</Label>
@@ -21,15 +18,15 @@
                 <StackLayout Margin="0,0,0,30"  HorizontalOptions="Center">
                     <Label HorizontalOptions="Center" FontSize="20" Margin="0,0,0,20">Status</Label>
                     <StackLayout Orientation="Horizontal">
-                        <Switch x:Name="Switch_Friend"/>
+                        <Switch x:Name="Switch_Friend" Toggled="Switch_Toggled"/>
                         <Label>Looking for a friend</Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Switch x:Name="Switch_FriendPlus"/>
+                        <Switch x:Name="Switch_FriendPlus" Toggled="Switch_Toggled"/>
                         <Label>Looking for a friend++</Label>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Switch x:Name="Switch_Player2"/>
+                        <Switch x:Name="Switch_Player2" Toggled="Switch_Toggled"/>
                         <Label>Looking for Player 2</Label>
                     </StackLayout>
                 </StackLayout>

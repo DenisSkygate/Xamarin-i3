@@ -10,6 +10,9 @@ namespace GeeCoeur.Views.Account
         public AccountWorkPage()
         {
             InitializeComponent();
+
+            Title.Text = GeeCoeurPage.SignedAccount.Work.Title;
+            Description.Text = GeeCoeurPage.SignedAccount.Work.Description;
         }
         async void Next_Clicked(object sender, System.EventArgs e)
         {
@@ -23,7 +26,7 @@ namespace GeeCoeur.Views.Account
         void Back_Clicked(object sender, System.EventArgs e)
         {
             var papa = (this.Parent as TabbedPage);
-            papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) -1];
+            papa.CurrentPage = papa.Children[papa.Children.IndexOf(this) - 1];
         }
     }
 }

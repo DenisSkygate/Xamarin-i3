@@ -27,9 +27,11 @@ namespace GeeCoeur.Views.Account.Items
 
         }
         public bool DeleteOnTap = true;
+
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if(DeleteOnTap){
+            if (DeleteOnTap)
+            {
                 GeeCoeurPage.SignedAccount.Skills.Remove(theSkill);
                 this.IsEnabled = false;
                 this.IsVisible = false;

@@ -8,7 +8,7 @@ namespace GeeCoeur.Views.Account
 {
     public partial class AccountPage : ContentPage
     {
-        
+
         public AccountPage()
         {
             InitializeComponent();
@@ -82,10 +82,21 @@ namespace GeeCoeur.Views.Account
 
         }
 
-
         private void ButtonUpdate_Clicked(object sender, EventArgs e)
         {
-            updateVisibleInfo();
+            Navigation.PushAsync(new AccountCompletionPage());
         }
+
+        private void Switch_Toggled(object sender, ToggledEventArgs e)
+        {
+            GeeCoeurPage.SignedAccount.Status[0] = Switch_Friend.IsToggled;
+            GeeCoeurPage.SignedAccount.Status[1] = Switch_FriendPlus.IsToggled;
+            GeeCoeurPage.SignedAccount.Status[2] = Switch_Player2.IsToggled;
+
+            Switch_Friend.IsToggled = GeeCoeurPage.SignedAccount.Status[0];
+            Switch_FriendPlus.IsToggled = GeeCoeurPage.SignedAccount.Status[1];
+            Switch_Player2.IsToggled = GeeCoeurPage.SignedAccount.Status[2];
+        }
+
     }
 }
