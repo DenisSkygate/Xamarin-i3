@@ -20,15 +20,21 @@ namespace GeeCoeur
 
         async void Signup_Clicked(object sender, System.EventArgs e)
         {
-            GeeCoeurPage.Logged = true;
+            if (Entry_Email.Text == Entry_PasswordVerif.Text)
+            {
+                GeeCoeurPage.Logged = true;
 
-            GeeCoeurPage.SignedAccount.Email = Entry_Email.Text;
-            GeeCoeurPage.SignedAccount.Password = Entry_Password.Text;
+                GeeCoeurPage.SignedAccount.Email = Entry_Email.Text;
+                GeeCoeurPage.SignedAccount.Password = Entry_Password.Text;
 
-
-            await Navigation.PushAsync(new AccountCompletionPage());
+                await Navigation.PushAsync(new AccountCompletionPage());
+            }
+            else
+            {
+                Entry_PasswordVerif.BackgroundColor = Color.Red;
+            }
         }
 
-       
+
     }
 }
