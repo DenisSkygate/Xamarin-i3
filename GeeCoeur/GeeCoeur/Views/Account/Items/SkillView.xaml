@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GeeCoeur.Views.Account.Items.SkillView">
     <ContentView.Content>
-        <StackLayout Orientation="Horizontal" BackgroundColor="LightGray">
-            <Label x:Name="skillName" />
-            <Button Text="X" TextColor="White" Clicked="Button_Clicked" BackgroundColor="Red"/>
+        <StackLayout Orientation="Horizontal" Margin="5">
+            <Label x:Name="skillName" FontSize="20" />
+            <Image Source="delete.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Center" VerticalOptions="Center" x:Name="DeleteLabel" />
         </StackLayout>
     </ContentView.Content>
 </ContentView>

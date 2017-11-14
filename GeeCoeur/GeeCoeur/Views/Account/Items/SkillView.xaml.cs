@@ -20,16 +20,20 @@ namespace GeeCoeur.Views.Account.Items
             InitializeComponent();
             theSkill = new Skill(theSkillText);
             skillName.Text = theSkill.name;
-
-            GeeCoeurPage.SignedAccount.Skills.Add(theSkill);
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += Button_Clicked;
+            this.GestureRecognizers.Add(tapGestureRecognizer);
+            GeeCoeurPage.Skills.Add(theSkill);
 
         }
-
+        public bool DeleteOnTap = true;
         private void Button_Clicked(object sender, EventArgs e)
         {
-            GeeCoeurPage.SignedAccount.Skills.Remove(theSkill);
-            this.IsEnabled = false;
-            this.IsVisible = false;
+            if(DeleteOnTap){
+                GeeCoeurPage.Skills.Remove(theSkill);
+                this.IsEnabled = false;
+                this.IsVisible = false;
+            }
         }
     }
 }

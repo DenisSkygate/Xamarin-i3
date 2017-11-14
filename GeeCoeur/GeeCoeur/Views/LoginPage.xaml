@@ -13,15 +13,10 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
 
-
-            <Label Text="GeeCoeur"
-                FontSize="50" 
+            <Image Source="logo.png"
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
-                TextColor="Purple" 
                 Grid.Row="0"/>
-
-
             
             <StackLayout Grid.Row="1" 
                 Margin="20,0,20,0">
