@@ -1,37 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="GeeCoeur.Views.Account.AccountPage">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView Margin="20">
             <StackLayout>
 
-                <StackLayout x:Name="ProfilePic">
-                    <Button x:Name="PicButton" Text="Pick Picture" Clicked="Handle_Clicked"></Button>
-                </StackLayout>
+             
 
-
-                <StackLayout>
+                <StackLayout HorizontalOptions="Center" Margin="0,0,0,30">
                     <Grid>
                         <Label HorizontalOptions="Center" FontSize="20">Basic Info</Label>
                         <Button Text="Update" HorizontalOptions="End" Clicked="ButtonUpdate_Clicked"/>
                     </Grid>
 
-                    <Label x:Name="Label_Name" Text="Firstname Lastname"/>
-                    <Label x:Name="Label_Pseudo" Text="Pseudo"/>
-                    <Label x:Name="Label_Email" Text="Email"/>
-                    <Label x:Name="Label_BirthDay" Text="Birthdate"/>
-                    <Label x:Name="Label_Orientation" Text="Sexual Orientation"/>
+                    <Label HorizontalOptions="Center" x:Name="Label_Name" Text="Firstname Lastname"/>
+                    <Label HorizontalOptions="Center" x:Name="Label_Pseudo" Text="Pseudo"/>
+                    <Label HorizontalOptions="Center" x:Name="Label_Email" Text="Email"/>
+                    <Label HorizontalOptions="Center" x:Name="Label_BirthDay" Text="Birthdate"/>
+                    <Label HorizontalOptions="Center" x:Name="Label_Orientation" Text="Sexual Orientation"/>
                 </StackLayout>
-                <StackLayout>
+                <StackLayout Margin="0,0,0,30">
                     <Label HorizontalOptions="Center" FontSize="20">Status</Label>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Switch x:Name="Switch_Friend"/>
                         <Label>Looking for a friend</Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Switch x:Name="Switch_FriendPlus"/>
                         <Label>Looking for a friend++</Label>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Switch x:Name="Switch_Player2"/>
                         <Label>Looking for Player 2</Label>
                     </StackLayout>
